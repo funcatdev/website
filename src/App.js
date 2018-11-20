@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
+import { Layout } from 'antd';
+import Navbar from './components/layout/Navbar';
+import Dashborder from './components/dashborder/Dashborder';
+import FooterComponent from './components/layout/Footer';
+
 
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Button type="primary">Button</Button>
-      </div>
+      <Layout className="layout">
+        <Navbar />
+        <Dashborder />
+        <FooterComponent />
+      </Layout>
     );
   }
 }

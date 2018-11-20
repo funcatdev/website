@@ -1,3 +1,6 @@
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -8,7 +11,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.logo{
+  width: 120px;
+  height: 31px;
+  background: #001529;
+  margin: 16px 24px 16px 0;
+  float: left;
 }
