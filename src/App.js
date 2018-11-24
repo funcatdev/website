@@ -9,7 +9,7 @@ import FooterComponent from './components/layout/Footer';
 class App extends Component {
   render() {
     return (
-      <Layout className="layout">
+      <Layout >
         <Navbar />
         <Dashborder />
         <FooterComponent />

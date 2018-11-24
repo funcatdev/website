@@ -1,0 +1,58 @@
+
+.section-title{
+    text-align:  center;
+    align-content: center;
+    padding-top: 50px;
+}
+.section-title h2.title.whiteFont,.section-title .subtitle.whiteFont{
+    color: #fff;
+}
+
+.section-title h2.title{
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+    color: #202124;
+    font-weight:400;
+    letter-spacing:0;
+}
+
+.lasy-image-load{
+    height: 120px;
+    width: 120px;
+    margin: auto;
+    border-radius: 60px;
+    background:#fff;
+    margin-bottom:8px; 
+}
+.section {
+    text-align: center;
+}
+
+.section h5{
+    text-align: center;
+    color: #5f6368;
+    font-size: .875rem;
+    font-weight: 400;
+    letter-spacing: .01562rem;
+    line-height: 1.5rem;
+    margin: 0 auto;
+    
+    
+}
+.slide-content {
+    min-width: 215px;
+    /* padding-top: 190px; */
+}
+
+.ant-carousel .slick-slide {
+    text-align: center;
+    height: 500px;
+    line-height: 500px;
+    background: #364d79;
+    overflow: hidden;
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }
+
