@@ -27,7 +27,7 @@ class SignIn extends Component {
       if (!err) {
         // console.log('Received values of form: ', values);
         axios.post('/api/v1/verifycode',values).then(res=>{
-          console.log(res);
+          console.log("res======",res);
           if(res.status == 200){
             this.props.createNewUser(this.state.phoneNum);
           }else{
@@ -130,7 +130,7 @@ class SignIn extends Component {
         
         
         <FormItem {...formTailLayout}>
-          <Button type="primary" htmlType="submit">提交</Button>
+          <Button type="primary" htmlType="submit">注册</Button>
         </FormItem>
       </Form>
 

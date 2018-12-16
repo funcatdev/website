@@ -21,6 +21,16 @@ const data = [
     'title': '性能测试提升班',
     'nums': 2180,
     'price':5880
+  },
+  {
+    'title': '产品经理就业班',
+    'nums': 2180,
+    'price':5880
+  },
+  {
+    'title': '数据分析就业班',
+    'nums': 2180,
+    'price':5880
   }
 ]
 
@@ -39,7 +49,6 @@ const data2 = [
 
 const item = data.map((val,index)=>{
   return(
-
     <Col key={index} md={7} sm={12}>
       <div style={{margin:"10px 5px"}}>
         <div style={{background:'#fff'}}>
@@ -64,7 +73,7 @@ export default class ScheduleComponet extends Component {
     return (
       <Content className='section'>
         <SectionTitleComponet subtitle="Curriculum Schedule" title="课程列表" />
-        <Row gutter={24} type="flex" justify="center">
+        <Row gutter={24} type="flex" justify="left">
           {item}
         </Row>
       </Content>

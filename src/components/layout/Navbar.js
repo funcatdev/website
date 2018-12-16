@@ -30,7 +30,7 @@ class Navbar extends Component {
           style={{ lineHeight: '64px' }}
         >
           <Menu.Item key="1"><Link to='/' >首页</Link></Menu.Item>
-          <Menu.Item key="2">关于我们</Menu.Item>
+          <Menu.Item key="2" >关于我们</Menu.Item>
           <Menu.Item key="3">联系我们</Menu.Item>
           {auth ? <SignOutLinks /> : <SignInLinks />}
         </Menu>
