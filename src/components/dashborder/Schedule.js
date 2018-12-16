@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Layout, Row, Col,Card,Icon,Avatar } from 'antd';
+import { Layout, Row, Col } from 'antd';
 import { Link} from 'react-router-dom';
 import SectionTitleComponet from './SectionTitle';
 
 const { Content } = Layout;
-const { Meta } = Card
+
 
 const data = [
   {
@@ -36,24 +36,6 @@ const data2 = [
     'price':5880
   }
 ]
-const content_outer={
-
-}
-const content_inne = {
-
-}
-const content_image={
-
-}
-
-const content_price={
-
-}
-const content_desc={
-
-}
-
-
 
 const item = data.map((val,index)=>{
   return(

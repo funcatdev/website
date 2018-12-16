@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Layout, Row, Col } from "antd";
 
 import SectionTitleComponet from './SectionTitle';
-const { Content } = Layout;
+
 
 const data = [
     {

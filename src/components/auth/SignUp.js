@@ -16,9 +16,6 @@ class NormalLoginForm extends Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-        <Content style={{height:"100%"}}>
-            <Row gutter={16} type="flex" justify="center">
-                <Col span={8}>
         <Form onSubmit={this.handleSubmit} className="login-form">
         <FormItem>
           {getFieldDecorator('userName', {
@@ -35,24 +32,15 @@ class NormalLoginForm extends Component {
           )}
         </FormItem>
         <FormItem>
-          {getFieldDecorator('remember', {
-            valuePropName: 'checked',
-            initialValue: true,
-          })(
-            <Checkbox>Remember me</Checkbox>
-          )}
-          <a className="login-form-forgot" href="">Forgot password</a>
+          <a className="login-form-forgot" href="">忘记密码</a>
           <Button type="primary" htmlType="submit" className="login-form-button">
-            Log in
+            登陆
           </Button>
-          Or <a href="">register now!</a>
+          Or <a href="">注册</a>
         </FormItem>
       </Form>
-      </Col>
-            </Row>
-      </Content>
     )
   }
 }
-const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
-export default WrappedNormalLoginForm;
+const LoginFormComponent = Form.create()(NormalLoginForm);
+export default LoginFormComponent;

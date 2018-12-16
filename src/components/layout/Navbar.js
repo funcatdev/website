@@ -1,37 +1,27 @@
 import React,{ Component}from 'react';
-import { Layout, Menu,Modal,Form,Input,Button } from 'antd';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import SignInComponent from '../auth/SignIn'
+import { Layout, Menu } from 'antd';
+import { Link } from 'react-router-dom'
+import SignOutLinks from './SignOutLinks';
+import SignInLinks from './SignInLinks';
 
-const FormItem = Form.Item;
+import {connect} from 'react-redux'
+
+
 const { Header } = Layout;
-const userStyle = {
-  'float': 'right',
-  'background': 'transparent',
-  'line-height': '30px',
-  'border': '1px solid',
-  'text-align': 'center',
-  'margin-top': '16px',
-  'padding': '0 15px',
-  'border-radius': '15px'
-}
 
-export default class Navbar extends Component {
+
+class Navbar extends Component {
   constructor(props){
     super(props);
-
-    this.state={
-      modalVisible:false
+    this.state= {
+      isLogin:false
     }
   }
 
-  setModal1Visible(modalVisible){
-    this.setState({modalVisible})
-  }
-  
   render(){
+    const {auth} = this.props;
     return (
-      <Header style={{ background: '#ffffff' }} >
+      <Header style={{ background: '#ffffff',position:'fixed', width:'100%',left:0, top:0,right: 0, zIndex: 1000 }} >
         <div className="logo" />
         <Menu
           theme="light"
@@ -39,38 +29,20 @@ export default class Navbar extends Component {
           defaultSelectedKeys={['1']}
           style={{ lineHeight: '64px' }}
         >
-          
           <Menu.Item key="1"><Link to='/' >首页</Link></Menu.Item>
           <Menu.Item key="2">关于我们</Menu.Item>
           <Menu.Item key="3">联系我们</Menu.Item>
-          <div style={userStyle}>
-            
-            <span key="4" onClick={() => this.setModal1Visible(true)}>注册</span>
-            
-            /
-            <Link to="login">
-            <span>登陆</span>
-            </Link>
-           
-          </div>
-          <Modal
-            title="用户注册"
-            style={{ top: 20 }}
-            visible={this.state.modalVisible}
-            onOk={() => this.setModal1Visible(false)}
-            onCancel={() => this.setModal1Visible(false)}
-          >
-          
-           <SignInComponent />
-          
-            
-          </Modal>
+          {auth ? <SignOutLinks /> : <SignInLinks />}
         </Menu>
-  
       </Header>
     );
-
   }
-  
-  
 }
+
+const mapStateToProps = (state)=>{
+  return {
+    auth:state.auth.authError
+  }
+}
+
+export default connect(mapStateToProps)(Navbar);

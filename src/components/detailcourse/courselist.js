@@ -1,7 +1,11 @@
 import React, { Component,Fragment } from 'react';
 import { Row,Col,Table,Collapse,Card,Button} from 'antd';
 import StudentofferComponent from './studentoffer';
+
+import '../../styles/detailcourse.css';
+
 const Panel = Collapse.Panel;
+
 
 export default class CourselistComponent extends Component {
     constructor(props){
@@ -77,7 +81,7 @@ export default class CourselistComponent extends Component {
         <Row type='flex' justify='center'>
             <Col span={16}>
             <Collapse bordered={false} defaultActiveKey={['1']}>
-            <Panel showArrow={false} disabled={true} header="凡猫教育产品经理课表" key="0"></Panel>
+            <Panel showArrow={false} disabled={true} style={{fontSize:20,background:"#1a54e7",color:'#fff',cursor:'pointer'}} header="凡猫教育产品经理课表" key="0"></Panel>
     <Panel header="第一周：初识产品经理；必备工具讲解" key="1">
       {text}
     </Panel>

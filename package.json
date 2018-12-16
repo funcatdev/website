@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@alicloud/sms-sdk": "^1.1.6",
     "@types/react": "^16.7.7",
     "antd": "3.10.8",
+    "axios": "^0.18.0",
     "babel-plugin-import": "^1.11.0",
     "react": "16.6.3",
     "react-app-rewired": "1.6.2",
     "react-dom": "16.6.3",
+    "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-app-rewired  start",
@@ -26,5 +31,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:3001"
 }
