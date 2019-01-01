@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Layout, Row, Col, Button, Modal } from 'antd';
 
+import banner from '../../assets/detailpage/productmanager/0.12.png'
+
 const { Content } = Layout;
 
 
@@ -29,7 +31,7 @@ export default class BannerComponent extends Component {
                 <Row>
                     <Col span={12}>
                         <div className="ImageBanner" style={{ width: 450, height: 275, float: "right", background: '#11919a' }}>
-
+                            <img src={banner} style={{width:450,height:275}}/>
                         </div>
                     </Col>
                     <Col span={12}>

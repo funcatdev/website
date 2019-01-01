@@ -3,3 +3,7 @@
     padding-left: 30px;
     cursor: default;
 }
+
+div.ant-collapse-item.ant-collapse-item-disabled.ant-collapse-no-arrow >div.ant-collapse-header{
+    color: white !important;
+}

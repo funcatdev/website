@@ -3,23 +3,32 @@ import { Layout, Row, Col } from "antd";
 
 import SectionTitleComponet from './SectionTitle';
 
+import phone from '../../assets/indexpage/0.15.png';
+import QQ from '../../assets/indexpage/0.16.png';
+import wechat from '../../assets/indexpage/0.17.png';
+import address from '../../assets/indexpage/0.18.png';
+
 
 const data = [
     {
         title: "联系电话",
-        content: "15900951907"
+        content: "15900951907",
+        image:phone
     },
     {
         title: 'QQ',
-        content: '5900951907'
+        content: '5900951907',
+        image:QQ
     },
     {
         title: '微信',
-        content: '5900951907'
+        content: '5900951907',
+        image:wechat
     },
     {
         title: '地址',
-        content: '上海市虹口区乍浦路480号'
+        content: '上海市虹口区乍浦路SOHU3',
+        image:address
     }
 ]
 
@@ -50,7 +59,9 @@ const avatarStyle = {
 
 let colcontent = data.map((val, index) => (
     <Col style={itemStyle} key={index} md={6} sm={12}>
-        <div style={avatarStyle} ></div>
+        <div style={avatarStyle} >
+            <img src={val.image} alt={val.title}/>
+        </div>
         <div style={contentStyle} >
             <span >{val.title}</span><br />
             <span >{val.content}</span>

@@ -7,11 +7,17 @@ body {
 }
 
 .logo{
+  
   width: 120px;
-  height: 31px;
-  background: #001529;
+  height: 32px;
+  line-height: 32px;
   margin: 16px 24px 16px 0;
   float: left;
+}
+
+
+.caroiselpng{
+  background: url('./assets/banner.png');
 }
 
 div.section{
