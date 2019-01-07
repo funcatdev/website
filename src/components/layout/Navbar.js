@@ -18,6 +18,22 @@ class Navbar extends Component {
       isLogin:false
     }
   }
+  handleMenuClick = (item)=>{
+    console.log(item.key);
+    
+    switch (item.key) {
+      case '1':
+        document.querySelector('.ant-carousel').scrollIntoView({behavior: "smooth"});
+        break;
+      case '2':
+        document.querySelector('#root > div > div.ant-layout-content > div:nth-child(5)').scrollIntoView({behavior:'smooth'})
+        break;
+      case '3':
+        document.querySelector('#root > div > div.ant-layout-content > div.section.ant-layout').scrollIntoView({behavior:'smooth'});
+      default:
+        break;
+    }
+  }
 
   render(){
     const {auth} = this.props;
@@ -34,6 +50,7 @@ class Navbar extends Component {
           mode="horizontal"
           defaultSelectedKeys={['1']}
           style={{ lineHeight: '64px' }}
+          onClick={this.handleMenuClick}
         >
           <Menu.Item key="1"><Link to='/' >首页</Link></Menu.Item>
           <Menu.Item key="2" >关于我们</Menu.Item>

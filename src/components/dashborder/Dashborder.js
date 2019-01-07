@@ -13,8 +13,8 @@ const Dashborder = () => {
             <CarouselComponet />
             <CourseSchdule />
             <CourseAvgComponet />
-           <AboutUsComponent />
-           <ConactUsComponet />
+            <AboutUsComponent />
+            <ConactUsComponet />
         </Fragment>
     );
 }
